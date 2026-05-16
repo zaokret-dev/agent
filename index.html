@@ -487,6 +487,7 @@ footer {
   .about-specialties { grid-template-columns:1fr; }
   .team-grid { grid-template-columns:1fr 1fr !important; }
 }
+.zone-overlay{pointer-events:none!important;}
 </style>
 </head>
 <body>
@@ -739,28 +740,28 @@ footer {
   </div>
   <div class="zones-grid">
     <div class="zone-card reveal">
-      <img class="zone-img" src="vracar.jpg" alt="Vračar" loading="lazy">
+      <img onclick="lbOpen(this.src)" style="cursor:pointer;" class="zone-img" src="vracar.jpg" alt="Vračar" loading="lazy">
       <div class="zone-overlay">
         <div class="zone-name">Vračar</div>
         <div class="zone-count">38 nekretnina</div>
       </div>
     </div>
     <div class="zone-card reveal">
-      <img class="zone-img" src="dedinje.jpg" alt="Dedinje" loading="lazy">
+      <img onclick="lbOpen(this.src)" style="cursor:pointer;" class="zone-img" src="dedinje.jpg" alt="Dedinje" loading="lazy">
       <div class="zone-overlay">
         <div class="zone-name">Dedinje</div>
         <div class="zone-count">24 nekretnine</div>
       </div>
     </div>
     <div class="zone-card reveal">
-      <img class="zone-img" src="senjak.jpg" alt="Senjak" loading="lazy">
+      <img onclick="lbOpen(this.src)" style="cursor:pointer;" class="zone-img" src="senjak.jpg" alt="Senjak" loading="lazy">
       <div class="zone-overlay">
         <div class="zone-name">Senjak</div>
         <div class="zone-count">19 nekretnina</div>
       </div>
     </div>
     <div class="zone-card reveal">
-      <img class="zone-img" src="dorcol.jpg" alt="Dorćol" loading="lazy">
+      <img onclick="lbOpen(this.src)" style="cursor:pointer;" class="zone-img" src="dorcol.jpg" alt="Dorćol" loading="lazy">
       <div class="zone-overlay">
         <div class="zone-name">Dorćol</div>
         <div class="zone-count">31 nekretnina</div>
@@ -1076,6 +1077,20 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a) {
     if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
   });
 });
+</script>
+
+<style>
+#LB{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.95);z-index:99999;cursor:pointer;}
+#LB img{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);max-width:90vw;max-height:90vh;object-fit:contain;cursor:default;border-radius:6px;}
+#LB span{position:fixed;top:16px;right:22px;color:#fff;font-size:2.5rem;line-height:1;cursor:pointer;}
+</style>
+<div id="LB" onclick="this.style.display='none'">
+  <span onclick="document.getElementById('LB').style.display='none'">&#x2715;</span>
+  <img id="LBi" src="" onclick="event.stopPropagation()">
+</div>
+<script>
+function lbOpen(s){document.getElementById('LBi').src=s;document.getElementById('LB').style.display='block';}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')document.getElementById('LB').style.display='none';});
 </script>
 </body>
 </html>
