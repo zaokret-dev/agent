@@ -3,8 +3,8 @@
 <html lang="sr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
-<title>Stefan Vukić | Agent za nekretnine | Beograd</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VAŠ AGENT | Agent za nekretnine | Beograd</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -20,24 +20,7 @@
 }
 * { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior:smooth; }
-html {
-  width:100%;
-  max-width:100%;
-  overflow-x:hidden;
-  box-sizing:border-box;
-}
-body {
-  font-family:'Jost',sans-serif;
-  background:var(--dark);
-  color:var(--white);
-  overflow-x:hidden;
-  width:100%;
-  max-width:100%;
-  min-height:100vh;
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
+body { font-family:'Jost',sans-serif; background:var(--dark); color:var(--white); overflow-x:hidden; }
 
 /* CURSOR - desktop only */
 .cursor { width:8px; height:8px; background:var(--gold); border-radius:50%; position:fixed; pointer-events:none; z-index:9999; transition:transform .15s ease; mix-blend-mode:difference; display:none; }
@@ -51,14 +34,12 @@ body {
 /* NAV */
 nav {
   position:fixed; top:0; left:0; right:0; z-index:999;
-  width:100%;
   padding:1.5rem 5%;
   display:flex; align-items:center; justify-content:space-between;
   border-bottom:1px solid rgba(201,168,76,.2);
   transition:all .4s;
   background:rgba(10,10,15,0.92);
   backdrop-filter:blur(16px);
-  box-sizing:border-box;
 }
 nav.scrolled {
   background:rgba(10,10,15,0.95);
@@ -92,7 +73,7 @@ nav.scrolled {
 
 /* HERO */
 #hero {
-  width:100vw;
+  width:100%;
   min-height:100vh;
   position:relative;
   display:flex;
@@ -105,7 +86,6 @@ nav.scrolled {
   background-repeat:no-repeat;
   box-sizing:border-box;
   overflow:hidden;
-  margin-left:calc(50% - 50vw);
 }
 #hero::before {
   content:'';
@@ -515,7 +495,7 @@ footer {
 <div class="cursor-ring" id="cursorRing"></div>
 
 <nav id="navbar">
-  <a class="nav-logo" href="#">Stefan <span>Vukić</span></a>
+  <a class="nav-logo" href="#">VAŠ AGENT</a>
   <ul class="nav-links">
     <li><a href="#about">O meni</a></li>
     <li><a href="#listings">Nekretnine</a></li>
@@ -560,7 +540,7 @@ footer {
 <!-- ABOUT -->
 <section id="about">
   <div class="about-img-wrap reveal">
-    <img class="about-img" src="https://images.unsplash.com/photo-1600566753151-384129cf4e3e?w=600&q=80&auto=format&fit=crop" alt="Stefan Vukić agent">
+    <img class="about-img" src="https://images.unsplash.com/photo-1600566753151-384129cf4e3e?w=600&q=80&auto=format&fit=crop" alt="VAŠ AGENT agent">
     <div class="about-img-border"></div>
     <div class="about-badge">
       <strong class="num">12+</strong>
@@ -569,7 +549,7 @@ footer {
   </div>
   <div class="about-text reveal">
     <div class="section-eyebrow">O meni</div>
-    <h2 class="section-title">Stefan Vukić —<br><em>više od agenta</em></h2>
+    <h2 class="section-title">VAŠ AGENT —<br><em>više od agenta</em></h2>
     <div class="gold-divider"></div>
     <p>Nekretnine su mnogo više od kvadrata i cena po kvadratu. To su mesta gde se grade životi, porodice i uspomene. Sa tim ubeđenjem radim svaki dan već više od decenije.</p>
     <p>Specijalizovan sam za premium segment tržišta — luksuzne stanove, salonske stanove i porodične kuće na najprestižnijim beogradskim adresama. Moji klijenti dolaze po preporuci, jer svaki posao završavam s punom posvećenošću.</p>
@@ -647,7 +627,7 @@ footer {
 
     <div class="listing-card reveal">
       <div class="listing-img">
-        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80&auto=format&fit=crop" alt="Stan Vračar" loading="lazy">
+        <img src="vracar.jpg" alt="Stan Vračar" loading="lazy">
         <div class="listing-badge">Prodaja</div>
       </div>
       <div class="listing-body">
@@ -664,7 +644,7 @@ footer {
 
     <div class="listing-card reveal">
       <div class="listing-img">
-        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80&auto=format&fit=crop" alt="Vila Dedinje" loading="lazy">
+        <img src="dedinje.jpg" alt="Vila Dedinje" loading="lazy">
         <div class="listing-badge">Prodaja</div>
       </div>
       <div class="listing-body">
@@ -681,7 +661,7 @@ footer {
 
     <div class="listing-card reveal">
       <div class="listing-img">
-        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80&auto=format&fit=crop" alt="Stan Senjak" loading="lazy">
+        <img src="senjak.jpg" alt="Stan Senjak" loading="lazy">
         <div class="listing-badge rent">Izdavanje</div>
       </div>
       <div class="listing-body">
@@ -715,7 +695,7 @@ footer {
 
     <div class="listing-card reveal">
       <div class="listing-img">
-        <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80&auto=format&fit=crop" alt="Stan Dorćol" loading="lazy">
+        <img src="dorcol.jpg" alt="Stan Dorćol" loading="lazy">
         <div class="listing-badge">Prodaja</div>
       </div>
       <div class="listing-body">
@@ -759,28 +739,28 @@ footer {
   </div>
   <div class="zones-grid">
     <div class="zone-card reveal">
-      <img class="zone-img" src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=400&q=80&auto=format&fit=crop" alt="Vračar" loading="lazy">
+      <img class="zone-img" src="vracar.jpg" alt="Vračar" loading="lazy">
       <div class="zone-overlay">
         <div class="zone-name">Vračar</div>
         <div class="zone-count">38 nekretnina</div>
       </div>
     </div>
     <div class="zone-card reveal">
-      <img class="zone-img" src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=400&q=80&auto=format&fit=crop" alt="Dedinje" loading="lazy">
+      <img class="zone-img" src="dedinje.jpg" alt="Dedinje" loading="lazy">
       <div class="zone-overlay">
         <div class="zone-name">Dedinje</div>
         <div class="zone-count">24 nekretnine</div>
       </div>
     </div>
     <div class="zone-card reveal">
-      <img class="zone-img" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=80&auto=format&fit=crop" alt="Senjak" loading="lazy">
+      <img class="zone-img" src="senjak.jpg" alt="Senjak" loading="lazy">
       <div class="zone-overlay">
         <div class="zone-name">Senjak</div>
         <div class="zone-count">19 nekretnina</div>
       </div>
     </div>
     <div class="zone-card reveal">
-      <img class="zone-img" src="https://images.unsplash.com/photo-1460317442991-0ec209397118?w=400&q=80&auto=format&fit=crop" alt="Dorćol" loading="lazy">
+      <img class="zone-img" src="dorcol.jpg" alt="Dorćol" loading="lazy">
       <div class="zone-overlay">
         <div class="zone-name">Dorćol</div>
         <div class="zone-count">31 nekretnina</div>
@@ -1012,15 +992,15 @@ footer {
     </div>
   </div>
   <div class="contact-img-wrap reveal">
-    <img src="https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=600&q=80&auto=format&fit=crop" alt="Stefan Vukić">
+    <img src="https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=600&q=80&auto=format&fit=crop" alt="VAŠ AGENT">
     <div class="contact-img-caption">"Svaka nekretnina ima svoju priču — pomažem vam da napišete vašu."</div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <a class="footer-logo" href="#">Stefan <span>Vukić</span></a>
-  <div class="footer-text">© 2025 Stefan Vukić Nekretnine · Licenciran agent · Registrovan posrednik br. 0847</div>
+  <a class="footer-logo" href="#">VAŠ AGENT</a>
+  <div class="footer-text">© 2025 VAŠ AGENT Nekretnine · Licenciran agent · Registrovan posrednik br. 0847</div>
   <div class="footer-links">
     <a href="#about">O meni</a>
     <a href="#listings">Ponuda</a>
