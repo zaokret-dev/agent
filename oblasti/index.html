@@ -41,7 +41,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 5%;display:fl
 
 /* ─── PAGE INTRO ─── */
 .page-intro{padding:140px 5% 80px;background:var(--dark2);text-align:center;position:relative;overflow:hidden}
-.page-intro::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);max-width:100%;width:100%;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.07) 0%,transparent 65%);pointer-events:none}
+.page-intro::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:800px;height:800px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.07) 0%,transparent 65%);pointer-events:none}
 .eyebrow{font-size:.65rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;justify-content:center;gap:1rem;margin-bottom:1.25rem}
 .eyebrow::before,.eyebrow::after{content:'';width:30px;height:1px;background:var(--gold)}
 .page-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,5rem);font-weight:300;line-height:1.05;margin-bottom:1.5rem}
@@ -126,13 +126,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 5%;display:fl
 @media(max-width:480px){.tab-btn{flex:1 1 100%}.price-grid{grid-template-columns:1fr}}
 
 @media(max-width:768px){
-  html,body{overflow-x:hidden!important;margin:0!important;padding:0!important;}
+  html,body{overflow-x:hidden!important;margin:0!important;}
   .page-intro::before{display:none!important;}
   .mun-header{gap:1.5rem!important;grid-template-columns:1fr!important;}
 }
 
-.ncard-img-overlay,.ncard-price{pointer-events:none!important;}
-.mun-hero-img-overlay{pointer-events:none!important;}
+.ncard-img-overlay,.ncard-price,.mun-hero-badge{pointer-events:none!important;}
 </style>
 </head>
 <body>
@@ -176,7 +175,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 5%;display:fl
 
   <!-- Header -->
   <div class="mun-header">
-    <div class="mun-hero-img reveal" onclick="lbOpen(this.querySelector(\'img\'))" style="cursor:zoom-in">
+    <div class=\"mun-hero-img reveal\" onclick=\"lbOpen(this.querySelector('img'))\" style=\"cursor:zoom-in\">
       <img src="../hero-cukarica.jpg" alt="Čukarica">
       <div class="mun-hero-badge">Čukarica — opština</div>
     </div>
@@ -198,7 +197,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 5%;display:fl
   <div class="ngrid">
 
     <div class="ncard reveal">
-      <div class="ncard-img" onclick="lbOpen(this.querySelector(\'img\'))" style="cursor:zoom-in">
+      <div class=\"ncard-img\" onclick=\"lbOpen(this.querySelector('img'))\" style=\"cursor:zoom-in\">
         <img src="../banovo.jpg" alt="Banovo brdo" loading="lazy">
         <div class="ncard-img-overlay"></div>
         <div class="ncard-price">€1.950–2.400/m²</div>
@@ -212,7 +211,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 5%;display:fl
     </div>
 
     <div class="ncard reveal reveal-d1">
-      <div class="ncard-img" onclick="lbOpen(this.querySelector(\'img\'))" style="cursor:zoom-in">
+      <div class=\"ncard-img\" onclick=\"lbOpen(this.querySelector('img'))\" style=\"cursor:zoom-in\">
         <img src="../golf.jpg" alt="Golf" loading="lazy">
         <div class="ncard-img-overlay"></div>
         <div class="ncard-price">€1.700–2.100/m²</div>
@@ -226,7 +225,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 5%;display:fl
     </div>
 
     <div class="ncard reveal reveal-d2">
-      <div class="ncard-img" onclick="lbOpen(this.querySelector(\'img\'))" style="cursor:zoom-in">
+      <div class=\"ncard-img\" onclick=\"lbOpen(this.querySelector('img'))\" style=\"cursor:zoom-in\">
         <img src="../julino.jpg" alt="Julino brdo" loading="lazy">
         <div class="ncard-img-overlay"></div>
         <div class="ncard-price">€1.500–1.900/m²</div>
@@ -240,7 +239,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 5%;display:fl
     </div>
 
     <div class="ncard reveal reveal-d3">
-      <div class="ncard-img" onclick="lbOpen(this.querySelector(\'img\'))" style="cursor:zoom-in">
+      <div class=\"ncard-img\" onclick=\"lbOpen(this.querySelector('img'))\" style=\"cursor:zoom-in\">
         <img src="../cerak.jpg" alt="Cerak" loading="lazy">
         <div class="ncard-img-overlay"></div>
         <div class="ncard-price">€1.600–2.000/m²</div>
@@ -254,7 +253,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 5%;display:fl
     </div>
 
     <div class="ncard reveal reveal-d4">
-      <div class="ncard-img" onclick="lbOpen(this.querySelector(\'img\'))" style="cursor:zoom-in">
+      <div class=\"ncard-img\" onclick=\"lbOpen(this.querySelector('img'))\" style=\"cursor:zoom-in\">
         <img src="../cerak-vin.jpg" alt="Cerak vinogradi" loading="lazy">
         <div class="ncard-img-overlay"></div>
         <div class="ncard-price">€1.550–1.950/m²</div>
@@ -268,7 +267,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 5%;display:fl
     </div>
 
     <div class="ncard reveal reveal-d5">
-      <div class="ncard-img" onclick="lbOpen(this.querySelector(\'img\'))" style="cursor:zoom-in">
+      <div class=\"ncard-img\" onclick=\"lbOpen(this.querySelector('img'))\" style=\"cursor:zoom-in\">
         <img src="../filmski.jpg" alt="Filmski grad" loading="lazy">
         <div class="ncard-img-overlay"></div>
         <div class="ncard-price">€1.400–1.750/m²</div>
@@ -282,7 +281,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 5%;display:fl
     </div>
 
     <div class="ncard reveal reveal-d6">
-      <div class="ncard-img" onclick="lbOpen(this.querySelector(\'img\'))" style="cursor:zoom-in">
+      <div class=\"ncard-img\" onclick=\"lbOpen(this.querySelector('img'))\" style=\"cursor:zoom-in\">
         <img src="../cukaricka.jpg" alt="Čukarička padina" loading="lazy">
         <div class="ncard-img-overlay"></div>
         <div class="ncard-price">€1.650–2.100/m²</div>
@@ -317,7 +316,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 5%;display:fl
 ════════════════════════════════════════ -->
 <section class="municipality" id="rakovica">
   <div class="mun-header">
-    <div class="mun-hero-img reveal" onclick="lbOpen(this.querySelector(\'img\'))" style="cursor:zoom-in">
+    <div class=\"mun-hero-img reveal\" onclick=\"lbOpen(this.querySelector('img'))\" style=\"cursor:zoom-in\">
       <img src="../rakovica-opstina.jpg" alt="Rakovica">
       <div class="mun-hero-badge">Rakovica — opština</div>
     </div>
@@ -338,7 +337,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 5%;display:fl
   <div class="ngrid">
 
     <div class="ncard reveal">
-      <div class="ncard-img" onclick="lbOpen(this.querySelector(\'img\'))" style="cursor:zoom-in">
+      <div class=\"ncard-img\" onclick=\"lbOpen(this.querySelector('img'))\" style=\"cursor:zoom-in\">
         <img src="../rakovica-centar.jpg" alt="Centar Rakovice" loading="lazy">
         <div class="ncard-img-overlay"></div>
         <div class="ncard-price">€1.600–2.000/m²</div>
@@ -352,7 +351,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 5%;display:fl
     </div>
 
     <div class="ncard reveal reveal-d1">
-      <div class="ncard-img" onclick="lbOpen(this.querySelector(\'img\'))" style="cursor:zoom-in">
+      <div class=\"ncard-img\" onclick=\"lbOpen(this.querySelector('img'))\" style=\"cursor:zoom-in\">
         <img src="../skojevsko.jpg" alt="Skojevsko naselje" loading="lazy">
         <div class="ncard-img-overlay"></div>
         <div class="ncard-price">€1.700–2.100/m²</div>
@@ -366,8 +365,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 5%;display:fl
     </div>
 
     <div class="ncard reveal reveal-d2">
-      <div class="ncard-img" onclick="lbOpen(this.querySelector(\'img\'))" style="cursor:zoom-in">
-        <img src="../vidikovac.jpg" alt="Vidikovac" loading="lazy">
+      <div class=\"ncard-img\" onclick=\"lbOpen(this.querySelector('img'))\" style=\"cursor:zoom-in\">
+        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80&auto=format&fit=crop" alt="Vidikovac" loading="lazy">
         <div class="ncard-img-overlay"></div>
         <div class="ncard-price">€1.550–1.900/m²</div>
       </div>
@@ -396,7 +395,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 5%;display:fl
 ════════════════════════════════════════ -->
 <section class="municipality" id="vozdovac">
   <div class="mun-header">
-    <div class="mun-hero-img reveal" onclick="lbOpen(this.querySelector(\'img\'))" style="cursor:zoom-in">
+    <div class=\"mun-hero-img reveal\" onclick=\"lbOpen(this.querySelector('img'))\" style=\"cursor:zoom-in\">
       <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=900&q=80&auto=format&fit=crop" alt="Voždovac">
       <div class="mun-hero-badge">Voždovac — opština</div>
     </div>
@@ -417,7 +416,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 5%;display:fl
   <div class="ngrid">
 
     <div class="ncard reveal">
-      <div class="ncard-img" onclick="lbOpen(this.querySelector(\'img\'))" style="cursor:zoom-in">
+      <div class=\"ncard-img\" onclick=\"lbOpen(this.querySelector('img'))\" style=\"cursor:zoom-in\">
         <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80&auto=format&fit=crop" alt="Autokomanda" loading="lazy">
         <div class="ncard-img-overlay"></div>
         <div class="ncard-price">€2.400–3.200/m²</div>
@@ -431,7 +430,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 5%;display:fl
     </div>
 
     <div class="ncard reveal reveal-d1">
-      <div class="ncard-img" onclick="lbOpen(this.querySelector(\'img\'))" style="cursor:zoom-in">
+      <div class=\"ncard-img\" onclick=\"lbOpen(this.querySelector('img'))\" style=\"cursor:zoom-in\">
         <img src="https://images.unsplash.com/photo-1486870591958-9b9d0d1dda99?w=600&q=80&auto=format&fit=crop" alt="Trošarina" loading="lazy">
         <div class="ncard-img-overlay"></div>
         <div class="ncard-price">€1.900–2.400/m²</div>
@@ -445,7 +444,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 5%;display:fl
     </div>
 
     <div class="ncard reveal reveal-d2">
-      <div class="ncard-img" onclick="lbOpen(this.querySelector(\'img\'))" style="cursor:zoom-in">
+      <div class=\"ncard-img\" onclick=\"lbOpen(this.querySelector('img'))\" style=\"cursor:zoom-in\">
         <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80&auto=format&fit=crop" alt="Saobraćajni fakultet" loading="lazy">
         <div class="ncard-img-overlay"></div>
         <div class="ncard-price">€1.900–2.300/m²</div>
@@ -459,7 +458,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 5%;display:fl
     </div>
 
     <div class="ncard reveal reveal-d3">
-      <div class="ncard-img" onclick="lbOpen(this.querySelector(\'img\'))" style="cursor:zoom-in">
+      <div class=\"ncard-img\" onclick=\"lbOpen(this.querySelector('img'))\" style=\"cursor:zoom-in\">
         <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=600&q=80&auto=format&fit=crop" alt="Vojvode Stepe" loading="lazy">
         <div class="ncard-img-overlay"></div>
         <div class="ncard-price">€2.100–2.600/m²</div>
@@ -473,7 +472,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 5%;display:fl
     </div>
 
     <div class="ncard reveal reveal-d4">
-      <div class="ncard-img" onclick="lbOpen(this.querySelector(\'img\'))" style="cursor:zoom-in">
+      <div class=\"ncard-img\" onclick=\"lbOpen(this.querySelector('img'))\" style=\"cursor:zoom-in\">
         <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80&auto=format&fit=crop" alt="Braće Jerković" loading="lazy">
         <div class="ncard-img-overlay"></div>
         <div class="ncard-price">€2.000–2.500/m²</div>
@@ -487,13 +486,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 5%;display:fl
     </div>
 
     <div class="ncard reveal reveal-d5">
-      <div class="ncard-img" onclick="lbOpen(this.querySelector(\'img\'))" style="cursor:zoom-in">
+      <div class=\"ncard-img\" onclick=\"lbOpen(this.querySelector('img'))\" style=\"cursor:zoom-in\">
         <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80&auto=format&fit=crop" alt="Bulevar oslobođenja" loading="lazy">
         <div class="ncard-img-overlay"></div>
         <div class="ncard-price">€2.200–2.800/m²</div>
       </div>
       <div class="ncard-body">
-        <div class="ncard-name">Bulevar Oslobođenja</div>
+        <div class="ncard-name">Bulevar oslobođenja</div>
         <div class="ncard-sub">Centralna osa · Konekcija · Luksuz</div>
         <p class="ncard-desc">Jedna od glavnih beogradskih saobraćajnica sa sve više premium projekata. Blizina klinike, VMA, Autokomande. Novoizgrađeni luksuzni stanovi i poslovni prostori postavljaju nove standarde.</p>
         <div class="ncard-tags"><span class="ntag">Novogradnja</span><span class="ntag">VMA</span><span class="ntag">Konekcija</span><span class="ntag">Premium</span></div>
@@ -501,7 +500,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 5%;display:fl
     </div>
 
     <div class="ncard reveal reveal-d6">
-      <div class="ncard-img" onclick="lbOpen(this.querySelector(\'img\'))" style="cursor:zoom-in">
+      <div class=\"ncard-img\" onclick=\"lbOpen(this.querySelector('img'))\" style=\"cursor:zoom-in\">
         <img src="https://images.unsplash.com/photo-1448630360428-65456885c650?w=600&q=80&auto=format&fit=crop" alt="Banjica" loading="lazy">
         <div class="ncard-img-overlay"></div>
         <div class="ncard-price">€1.950–2.350/m²</div>
@@ -535,7 +534,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 5%;display:fl
 ════════════════════════════════════════ -->
 <section class="municipality" id="vracar">
   <div class="mun-header">
-    <div class="mun-hero-img reveal" onclick="lbOpen(this.querySelector(\'img\'))" style="cursor:zoom-in">
+    <div class=\"mun-hero-img reveal\" onclick=\"lbOpen(this.querySelector('img'))\" style=\"cursor:zoom-in\">
       <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&q=80&auto=format&fit=crop" alt="Vračar">
       <div class="mun-hero-badge">Vračar — opština</div>
     </div>
@@ -556,7 +555,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 5%;display:fl
   <div class="ngrid">
 
     <div class="ncard reveal">
-      <div class="ncard-img" onclick="lbOpen(this.querySelector(\'img\'))" style="cursor:zoom-in">
+      <div class=\"ncard-img\" onclick=\"lbOpen(this.querySelector('img'))\" style=\"cursor:zoom-in\">
         <img src="https://images.unsplash.com/photo-1600566753151-384129cf4e3e?w=600&q=80&auto=format&fit=crop" alt="Krunska" loading="lazy">
         <div class="ncard-img-overlay"></div>
         <div class="ncard-price">€4.000–6.000/m²</div>
@@ -570,13 +569,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 5%;display:fl
     </div>
 
     <div class="ncard reveal reveal-d1">
-      <div class="ncard-img" onclick="lbOpen(this.querySelector(\'img\'))" style="cursor:zoom-in">
+      <div class=\"ncard-img\" onclick=\"lbOpen(this.querySelector('img'))\" style=\"cursor:zoom-in\">
         <img src="https://images.unsplash.com/photo-1600573472592-401b489a3cdc?w=600&q=80&auto=format&fit=crop" alt="Krunski venac" loading="lazy">
         <div class="ncard-img-overlay"></div>
         <div class="ncard-price">€3.500–5.000/m²</div>
       </div>
       <div class="ncard-body">
-        <div class="ncard-name">Krunski Venac</div>
+        <div class="ncard-name">Krunski venac</div>
         <div class="ncard-sub">Luksuz · Zelenilo · Ekskluzivno</div>
         <p class="ncard-desc">Zelena oaza u srcu Vračara. Šetne staze, privatni parkovi, urbane vile i reprezentativne zgrade. Kombinuje luksuz sa zelenilom — što je retkost u gradskoj jezgri. Izuzetno traženo.</p>
         <div class="ncard-tags"><span class="ntag">Zelenilo</span><span class="ntag">Vile</span><span class="ntag">Luksuz</span><span class="ntag">Ekskluzivno</span></div>
@@ -584,7 +583,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 5%;display:fl
     </div>
 
     <div class="ncard reveal reveal-d2">
-      <div class="ncard-img" onclick="lbOpen(this.querySelector(\'img\'))" style="cursor:zoom-in">
+      <div class=\"ncard-img\" onclick=\"lbOpen(this.querySelector('img'))\" style=\"cursor:zoom-in\">
         <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=600&q=80&auto=format&fit=crop" alt="Kalenić" loading="lazy">
         <div class="ncard-img-overlay"></div>
         <div class="ncard-price">€3.000–4.200/m²</div>
@@ -598,13 +597,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 5%;display:fl
     </div>
 
     <div class="ncard reveal reveal-d3">
-      <div class="ncard-img" onclick="lbOpen(this.querySelector(\'img\'))" style="cursor:zoom-in">
+      <div class=\"ncard-img\" onclick=\"lbOpen(this.querySelector('img'))\" style=\"cursor:zoom-in\">
         <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80&auto=format&fit=crop" alt="Bulevar kralja Aleksandra" loading="lazy">
         <div class="ncard-img-overlay"></div>
         <div class="ncard-price">€2.800–3.800/m²</div>
       </div>
       <div class="ncard-body">
-        <div class="ncard-name">Bulevar Kralja Aleksandra</div>
+        <div class="ncard-name">Bulevar kralja Aleksandra</div>
         <div class="ncard-sub">Universiteti · Dinamično · Konekcija</div>
         <p class="ncard-desc">Centralni bulevar Vračara sa Ekonomskim i Pravnim fakultetom. Bogata ponuda stanara i kupaca, živahan sadržaj, odlične saobraćajne konekcije. Stabilan prinos na investiciju za izdavanje.</p>
         <div class="ncard-tags"><span class="ntag">Fakulteti</span><span class="ntag">Investicija</span><span class="ntag">Konekcija</span></div>
@@ -612,13 +611,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 5%;display:fl
     </div>
 
     <div class="ncard reveal reveal-d4">
-      <div class="ncard-img" onclick="lbOpen(this.querySelector(\'img\'))" style="cursor:zoom-in">
+      <div class=\"ncard-img\" onclick=\"lbOpen(this.querySelector('img'))\" style=\"cursor:zoom-in\">
         <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80&auto=format&fit=crop" alt="Crveni krst" loading="lazy">
         <div class="ncard-img-overlay"></div>
         <div class="ncard-price">€2.600–3.500/m²</div>
       </div>
       <div class="ncard-body">
-        <div class="ncard-name">Crveni Krst</div>
+        <div class="ncard-name">Crveni krst</div>
         <div class="ncard-sub">Pristupačno · Perspektiva · Raste</div>
         <p class="ncard-desc">Jedan od najpristupačnijih delova Vračara uz brz rast vrednosti. Odlična tranziciona zona između centra i Voždovca. Interesantan za mlađe kupce koji žele vračarsku adresu po realnijoj ceni.</p>
         <div class="ncard-tags"><span class="ntag">Dostupno</span><span class="ntag">Raste</span><span class="ntag">Mladi</span><span class="ntag">Perspektivno</span></div>
@@ -626,7 +625,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 5%;display:fl
     </div>
 
     <div class="ncard reveal reveal-d5">
-      <div class="ncard-img" onclick="lbOpen(this.querySelector(\'img\'))" style="cursor:zoom-in">
+      <div class=\"ncard-img\" onclick=\"lbOpen(this.querySelector('img'))\" style=\"cursor:zoom-in\">
         <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80&auto=format&fit=crop" alt="Hram Svetog Save" loading="lazy">
         <div class="ncard-img-overlay"></div>
         <div class="ncard-price">€3.200–4.800/m²</div>
@@ -640,7 +639,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 5%;display:fl
     </div>
 
     <div class="ncard reveal reveal-d6">
-      <div class="ncard-img" onclick="lbOpen(this.querySelector(\'img\'))" style="cursor:zoom-in">
+      <div class=\"ncard-img\" onclick=\"lbOpen(this.querySelector('img'))\" style=\"cursor:zoom-in\">
         <img src="https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=600&q=80&auto=format&fit=crop" alt="Čubura" loading="lazy">
         <div class="ncard-img-overlay"></div>
         <div class="ncard-price">€2.900–3.900/m²</div>
@@ -659,10 +658,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.2rem 5%;display:fl
     <div class="neighborhoods-label">Cene po naseljima · april 2025.</div>
     <div class="price-grid">
       <div class="price-cell"><div class="pc-name">Krunska</div><div class="pc-val">€5.200</div><div class="pc-unit">prosek / m²</div></div>
-      <div class="price-cell"><div class="pc-name">Krunski Venac</div><div class="pc-val">€4.200</div><div class="pc-unit">prosek / m²</div></div>
+      <div class="price-cell"><div class="pc-name">Krunski venac</div><div class="pc-val">€4.200</div><div class="pc-unit">prosek / m²</div></div>
       <div class="price-cell"><div class="pc-name">Kalenić</div><div class="pc-val">€3.600</div><div class="pc-unit">prosek / m²</div></div>
       <div class="price-cell"><div class="pc-name">Bulevar Kr. Aleksandra</div><div class="pc-val">€3.300</div><div class="pc-unit">prosek / m²</div></div>
-      <div class="price-cell"><div class="pc-name">Crveni Krst</div><div class="pc-val">€3.050</div><div class="pc-unit">prosek / m²</div></div>
+      <div class="price-cell"><div class="pc-name">Crveni krst</div><div class="pc-val">€3.050</div><div class="pc-unit">prosek / m²</div></div>
       <div class="price-cell"><div class="pc-name">Hram Sv. Save</div><div class="pc-val">€4.000</div><div class="pc-unit">prosek / m²</div></div>
       <div class="price-cell"><div class="pc-name">Čubura</div><div class="pc-val">€3.400</div><div class="pc-unit">prosek / m²</div></div>
     </div>
