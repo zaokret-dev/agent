@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="sr">
 <head>
@@ -212,5 +213,23 @@
   </div>
 </footer>
 
+
+<div id="mob" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(10,10,15,0.98);z-index:998;flex-direction:column;align-items:center;justify-content:center;gap:2rem;">
+  <a href="https://zaokret-dev.github.io/agent/#about" style="color:var(--white);text-decoration:none;font-size:1.2rem;letter-spacing:.2em;text-transform:uppercase;" onclick="document.getElementById('mob').style.display='none'">O meni</a>
+  <a href="https://zaokret-dev.github.io/agent/#listings" style="color:var(--white);text-decoration:none;font-size:1.2rem;letter-spacing:.2em;text-transform:uppercase;" onclick="document.getElementById('mob').style.display='none'">Nekretnine</a>
+  <a href="https://zaokret-dev.github.io/agent/oblasti/" style="color:var(--white);text-decoration:none;font-size:1.2rem;letter-spacing:.2em;text-transform:uppercase;" onclick="document.getElementById('mob').style.display='none'">Oblasti</a>
+  <a href="https://zaokret-dev.github.io/agent/#contact" style="color:var(--white);text-decoration:none;font-size:1.2rem;letter-spacing:.2em;text-transform:uppercase;" onclick="document.getElementById('mob').style.display='none'">Kontakt</a>
+  <a href="privatnost.html" style="color:var(--gold);text-decoration:none;font-size:1.2rem;letter-spacing:.2em;text-transform:uppercase;">Privatnost</a>
+</div>
+<script>
+document.querySelector('.hamburger').addEventListener('click', function() {
+  var mob = document.getElementById('mob');
+  if (mob.style.display === 'flex') {
+    mob.style.display = 'none';
+  } else {
+    mob.style.display = 'flex';
+  }
+});
+</script>
 </body>
 </html>
