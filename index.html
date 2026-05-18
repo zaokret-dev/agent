@@ -1088,13 +1088,21 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a) {
 #LB img{max-width:100%;max-height:100%;object-fit:contain;border-radius:6px;display:block;}
 #LB .lbx{position:absolute;top:14px;right:18px;color:#fff;font-size:2.2rem;cursor:pointer;line-height:1;}
 </style>
-<div id="LB" onclick="lbClose()">
+<div id="LB" onclick="lbClose()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:99999;cursor:default;">
   <div class="lbi" onclick="event.stopPropagation()"><img id="LBi" src=""></div>
   <span class="lbx" onclick="lbClose()">&#x2715;</span>
 </div>
 <script>
-function lbOpen(s){document.getElementById('LBi').src=s;document.getElementById('LB').style.display='block';}
-function lbClose(){document.getElementById('LB').style.display='none';}
+function lbOpen(s){
+  document.getElementById('LBi').src=s;
+  document.getElementById('LB').style.display='block';
+  document.body.style.cursor='default';
+  document.getElementById('LB').style.cursor='default';
+}
+function lbClose(){
+  document.getElementById('LB').style.display='none';
+  document.body.style.cursor='none';
+}
 document.addEventListener('keydown',function(e){if(e.key==='Escape')lbClose();});
 </script>
 </body>
