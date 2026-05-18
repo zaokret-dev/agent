@@ -491,6 +491,10 @@ footer {
   #about::before, #process::after { display:none !important; }
 }
 .zone-overlay{pointer-events:none!important;}
+
+#LB, #LB *, #LBi, #LB .lbx, #LB .lbi {
+  cursor: default !important;
+}
 </style>
 </head>
 <body>
@@ -1094,12 +1098,15 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a) {
 </div>
 <script>
 function lbOpen(s){
+  document.querySelectorAll('*').forEach(function(el){ el.style.cursor=''; });
+  document.body.style.cursor='default';
   document.getElementById('LBi').src=s;
   document.getElementById('LB').style.display='block';
   document.body.style.cursor='default';
   document.getElementById('LB').style.cursor='default';
 }
 function lbClose(){
+  document.body.style.cursor='';
   document.getElementById('LB').style.display='none';
   document.body.style.cursor='none';
 }
