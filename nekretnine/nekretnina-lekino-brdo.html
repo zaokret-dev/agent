@@ -170,6 +170,46 @@ textarea.form-input { resize:vertical; min-height:80px; }
 
 @media (max-width:900px) { #prop-details { grid-template-columns:1fr; } }
 
+/* LIGHTBOX */
+.lightbox {
+  display:none; position:fixed; inset:0; z-index:9999;
+  background:rgba(10,10,15,0.96); align-items:center; justify-content:center;
+  padding:2rem;
+}
+.lightbox.open { display:flex; }
+.lightbox img {
+  max-width:92vw; max-height:88vh; object-fit:contain; display:block;
+  box-shadow:0 20px 60px rgba(0,0,0,.5);
+}
+.lightbox-close {
+  position:absolute; top:1.5rem; right:2rem; z-index:2;
+  background:none; border:1px solid var(--border); color:var(--white);
+  width:44px; height:44px; font-size:1.4rem; line-height:1; cursor:pointer;
+  display:flex; align-items:center; justify-content:center; transition:all .2s;
+}
+.lightbox-close:hover { border-color:var(--gold); color:var(--gold); }
+.lightbox-nav {
+  position:absolute; top:50%; transform:translateY(-50%);
+  background:none; border:1px solid var(--border); color:var(--white);
+  width:48px; height:48px; font-size:1.4rem; cursor:pointer;
+  display:flex; align-items:center; justify-content:center; transition:all .2s;
+}
+.lightbox-nav:hover { border-color:var(--gold); color:var(--gold); }
+.lightbox-prev { left:1.5rem; }
+.lightbox-next { right:1.5rem; }
+.lightbox-counter {
+  position:absolute; bottom:1.5rem; left:50%; transform:translateX(-50%);
+  color:var(--gray); font-size:.78rem; letter-spacing:1px;
+}
+.prop-main-img { cursor:pointer; }
+.gal-grid > * { cursor:pointer; }
+@media (max-width:640px) {
+  .lightbox-nav { width:38px; height:38px; font-size:1.1rem; }
+  .lightbox-prev { left:.5rem; }
+  .lightbox-next { right:.5rem; }
+  .lightbox-close { top:1rem; right:1rem; width:38px; height:38px; }
+}
+
 /* FOOTER */
 footer {
   background:var(--dark); border-top:1px solid var(--border);
@@ -217,7 +257,7 @@ footer {
   <h1 class="prop-title">Lekino brdo, Bačvanska — renoviran dvosoban stan od 65 m²</h1>
   <div class="prop-loc">📍 <span>Voždovac</span> · Lekino brdo · Bačvanska</div>
 
-  <div class="prop-main-img">
+  <div class="prop-main-img" onclick="openLightbox(0)">
     <img src="/agent/images/1.jpg" alt="Lekino brdo, Bačvanska — dnevna soba">
   </div>
 
@@ -286,25 +326,25 @@ footer {
   <div class="section-eyebrow">Fotografije</div>
   <h2 class="section-title">Galerija <em>fotografija</em></h2>
   <div class="gal-grid">
-    <a href="/agent/images/1.jpg" target="_blank"><img src="/agent/images/1.jpg" alt="Dnevna soba" loading="lazy"></a>
-    <a href="/agent/images/2.jpg" target="_blank"><img src="/agent/images/2.jpg" alt="Kuhinja" loading="lazy"></a>
-    <a href="/agent/images/3.jpg" target="_blank"><img src="/agent/images/3.jpg" alt="Kupatilo" loading="lazy"></a>
-    <a href="/agent/images/4.jpg" target="_blank"><img src="/agent/images/4.jpg" alt="Parking u dvorištu" loading="lazy"></a>
-    <a href="/agent/images/5.jpg" target="_blank"><img src="/agent/images/5.jpg" alt="Ostava" loading="lazy"></a>
-    <a href="/agent/images/6.jpg" target="_blank"><img src="/agent/images/6.jpg" alt="Trpezarija" loading="lazy"></a>
-    <a href="/agent/images/9.jpg" target="_blank"><img src="/agent/images/9.jpg" alt="Terasa" loading="lazy"></a>
-    <a href="/agent/images/10.jpg" target="_blank"><img src="/agent/images/10.jpg" alt="Kupatilo" loading="lazy"></a>
-    <a href="/agent/images/11.jpg" target="_blank"><img src="/agent/images/11.jpg" alt="Spavaća soba" loading="lazy"></a>
-    <a href="/agent/images/12.jpg" target="_blank"><img src="/agent/images/12.jpg" alt="Terasa" loading="lazy"></a>
-    <a href="/agent/images/13.jpg" target="_blank"><img src="/agent/images/13.jpg" alt="Kuhinja" loading="lazy"></a>
-    <a href="/agent/images/13.1.jpg" target="_blank"><img src="/agent/images/13.1.jpg" alt="Hodnik" loading="lazy"></a>
-    <a href="/agent/images/14.jpg" target="_blank"><img src="/agent/images/14.jpg" alt="Hodnik" loading="lazy"></a>
-    <a href="/agent/images/15.jpg" target="_blank"><img src="/agent/images/15.jpg" alt="Hodnik" loading="lazy"></a>
-    <a href="/agent/images/16.jpg" target="_blank"><img src="/agent/images/16.jpg" alt="Spavaća soba" loading="lazy"></a>
-    <a href="/agent/images/17.jpg" target="_blank"><img src="/agent/images/17.jpg" alt="Dnevna soba" loading="lazy"></a>
-    <a href="/agent/images/18.jpg" target="_blank"><img src="/agent/images/18.jpg" alt="Trpezarija" loading="lazy"></a>
-    <a href="/agent/images/19.jpg" target="_blank"><img src="/agent/images/19.jpg" alt="Dnevna soba" loading="lazy"></a>
-    <a href="/agent/images/20.jpg" target="_blank"><img src="/agent/images/20.jpg" alt="Dnevna soba" loading="lazy"></a>
+    <div onclick="openLightbox(0)"><img src="/agent/images/1.jpg" alt="Dnevna soba" loading="lazy"></div>
+    <div onclick="openLightbox(1)"><img src="/agent/images/2.jpg" alt="Kuhinja" loading="lazy"></div>
+    <div onclick="openLightbox(2)"><img src="/agent/images/3.jpg" alt="Kupatilo" loading="lazy"></div>
+    <div onclick="openLightbox(3)"><img src="/agent/images/4.jpg" alt="Parking u dvorištu" loading="lazy"></div>
+    <div onclick="openLightbox(4)"><img src="/agent/images/5.jpg" alt="Ostava" loading="lazy"></div>
+    <div onclick="openLightbox(5)"><img src="/agent/images/6.jpg" alt="Trpezarija" loading="lazy"></div>
+    <div onclick="openLightbox(6)"><img src="/agent/images/9.jpg" alt="Terasa" loading="lazy"></div>
+    <div onclick="openLightbox(7)"><img src="/agent/images/10.jpg" alt="Kupatilo" loading="lazy"></div>
+    <div onclick="openLightbox(8)"><img src="/agent/images/11.jpg" alt="Spavaća soba" loading="lazy"></div>
+    <div onclick="openLightbox(9)"><img src="/agent/images/12.jpg" alt="Terasa" loading="lazy"></div>
+    <div onclick="openLightbox(10)"><img src="/agent/images/13.jpg" alt="Kuhinja" loading="lazy"></div>
+    <div onclick="openLightbox(11)"><img src="/agent/images/13.1.jpg" alt="Hodnik" loading="lazy"></div>
+    <div onclick="openLightbox(12)"><img src="/agent/images/14.jpg" alt="Hodnik" loading="lazy"></div>
+    <div onclick="openLightbox(13)"><img src="/agent/images/15.jpg" alt="Hodnik" loading="lazy"></div>
+    <div onclick="openLightbox(14)"><img src="/agent/images/16.jpg" alt="Spavaća soba" loading="lazy"></div>
+    <div onclick="openLightbox(15)"><img src="/agent/images/17.jpg" alt="Dnevna soba" loading="lazy"></div>
+    <div onclick="openLightbox(16)"><img src="/agent/images/18.jpg" alt="Trpezarija" loading="lazy"></div>
+    <div onclick="openLightbox(17)"><img src="/agent/images/19.jpg" alt="Dnevna soba" loading="lazy"></div>
+    <div onclick="openLightbox(18)"><img src="/agent/images/20.jpg" alt="Dnevna soba" loading="lazy"></div>
   </div>
 </section>
 
@@ -382,9 +422,54 @@ footer {
   </div>
 </footer>
 
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <button class="lightbox-nav lightbox-prev" onclick="navLightbox(-1)">‹</button>
+  <img id="lightbox-img" src="" alt="">
+  <button class="lightbox-nav lightbox-next" onclick="navLightbox(1)">›</button>
+  <div class="lightbox-counter" id="lightbox-counter"></div>
+</div>
+
 <script>
 document.getElementById('ham').addEventListener('click', function(){
   document.getElementById('mob').classList.add('open');
+});
+
+var galleryImages = [
+  "/agent/images/1.jpg","/agent/images/2.jpg","/agent/images/3.jpg","/agent/images/4.jpg",
+  "/agent/images/5.jpg","/agent/images/6.jpg","/agent/images/9.jpg","/agent/images/10.jpg",
+  "/agent/images/11.jpg","/agent/images/12.jpg","/agent/images/13.jpg","/agent/images/13.1.jpg",
+  "/agent/images/14.jpg","/agent/images/15.jpg","/agent/images/16.jpg","/agent/images/17.jpg",
+  "/agent/images/18.jpg","/agent/images/19.jpg","/agent/images/20.jpg"
+];
+var lbIndex = 0;
+
+function openLightbox(i) {
+  lbIndex = i;
+  updateLightbox();
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function navLightbox(dir) {
+  lbIndex = (lbIndex + dir + galleryImages.length) % galleryImages.length;
+  updateLightbox();
+}
+function updateLightbox() {
+  document.getElementById('lightbox-img').src = galleryImages[lbIndex];
+  document.getElementById('lightbox-counter').textContent = (lbIndex+1) + " / " + galleryImages.length;
+}
+document.getElementById('lightbox').addEventListener('click', function(e){
+  if (e.target.id === 'lightbox') closeLightbox();
+});
+document.addEventListener('keydown', function(e){
+  if (!document.getElementById('lightbox').classList.contains('open')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') navLightbox(-1);
+  if (e.key === 'ArrowRight') navLightbox(1);
 });
 </script>
 
